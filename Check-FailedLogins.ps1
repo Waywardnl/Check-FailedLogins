@@ -9,6 +9,11 @@
   Pad naar logbestand (standaard: C:\Logs\FailedLoginMonitor.log)
 #>
 
+## Scheduled Task:
+#
+# C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+# -ExecutionPolicy Bypass -File C:\Users\Sysop\Documents\Check-FailedLogins.ps1 -Threshold 10 -LogFile C:\Users\Sysop\Documents\LOG\FailedLoginMonitor.log
+
 param (
     [int]$Threshold = 10,
     [string]$LogFile = "C:\Logs\FailedLoginMonitor.log"
